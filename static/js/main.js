@@ -1,6 +1,5 @@
 
 
-console.log('main.js working properly')
 
 
 var usernameInput = document.querySelector('#username');
@@ -11,8 +10,16 @@ var webSocket;
 
 // function added to onmessage event in the websocket
 function webSocketOnMessage(event){
-	var parseData = JSON.parse(event.data);
-	var message = parseData['message']
+	console.log('websocket just recieved a message')
+
+	if(event.data){
+		var parseData = JSON.parse(event.data);
+	}else{
+		var parseData = {
+			'message': 'No message to pass.'
+		};
+	}
+	var message = parseData['message'];
 	console.log('message: ', message)
 }
 
@@ -55,13 +62,15 @@ btnJoin.addEventListener('click', () => {
 		});
 		webSocket.send(jsonStr)
 	}); 
-	webSocket.addEventListener('message', webSocketOnMessage); 
+
+	webSocket.addEventListener('message', webSocketOnMessage()); 
+
 	webSocket.addEventListener('close', (e) => {
 		console.log('connection closed')
 	}); 
 	webSocket.addEventListener('error', (e) => {
 		console.log('Error occurred')
-		console.error('Error: ', error)
+		console.error('Error')
 	}); 
 
 })
