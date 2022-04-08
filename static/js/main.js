@@ -12,13 +12,7 @@ var webSocket;
 function webSocketOnMessage(event){
 	console.log('websocket just recieved a message')
 
-	if(event.data){
-		var parseData = JSON.parse(event.data);
-	}else{
-		var parseData = {
-			'message': 'No message to pass.'
-		};
-	}
+	var parseData = JSON.parse(event.data);
 	var message = parseData['message'];
 	console.log('message: ', message)
 }
@@ -63,7 +57,7 @@ btnJoin.addEventListener('click', () => {
 		webSocket.send(jsonStr)
 	}); 
 
-	webSocket.addEventListener('message', webSocketOnMessage()); 
+	webSocket.addEventListener('message', webSocketOnMessage); 
 
 	webSocket.addEventListener('close', (e) => {
 		console.log('connection closed')

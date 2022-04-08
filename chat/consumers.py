@@ -22,9 +22,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
 			)
 		print('Disconnected...')
 
-	async def recieve(self, text_data):
-		print('\n\nrecieve function activated\n')
-		print('\n\nrecieve function activated\n')
+	async def receive(self, text_data):
 		print('\n\nrecieve function activated\n')
 		recieve_dict = json.loads(text_data)
 		message = recieve_dict['message']
@@ -38,9 +36,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
 				}
 			)
 
-	async def send_message(self, event):
-		print('\n\nsend_message function activated\n')
-		print('\n\nsend_message function activated\n')
+	async def chat_message(self, event):
 		print('\n\nsend_message function activated\n')
 		message = event['message']
 
