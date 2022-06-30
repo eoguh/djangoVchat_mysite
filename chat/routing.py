@@ -3,6 +3,7 @@ from . import consumers
 
 
 websocket_urlpatterns = [
-	re_path(r'', consumers.ChatConsumer.as_asgi()), # ChatConsumer is defined in consumers.py
+	# ChatConsumer is defined in consumers.py
+	re_path(r'', consumers.ChatConsumer.as_asgi()), 
 ]
 

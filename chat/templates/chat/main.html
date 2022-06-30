@@ -4,13 +4,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Django Channels WebRTC</title>
+	<title>Resonance Demo</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 </head>
 <body>
-		<h3 id="label-username">USERNAME</h3>
+		<h3 id="label-username">Students name</h3>
 		<div>
-			<input id="username"><button id="btn-join">Join Room</button>
+			<input id="username"><button id="btn-join">Join live class</button>
 		</div>
 		<div id="main-grid-container">
 			<div id="video-container">
@@ -23,15 +23,15 @@
 			<div id="chat">
 				<h3>CHAT</h3>
 				<div id="messages">
-					<ul id="message-list"></ul>
+					<!-- <ul id="message-list"></ul> -->
 				</div>
 				<div>
-					<input id="msg">
-					<button id="btn-send-msg">Send Message</button>
+					<!-- <input id="msg"> -->
+					<!-- <button id="btn-send-msg">Send Message</button> -->
 				</div>
-				<button id="btn-share-screen">Share Screen</button>
+				<button id="btn-share-screen" >Share Screen</button>
 			</div>
 		</div>
-	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/main.js' %}" defer></script>
 </body>
 </html>

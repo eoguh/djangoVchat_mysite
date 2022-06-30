@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-va&@3nx+z!eisr&-i)=5)#6mpt*=86z#4xb+w4-i#va3*rd7xj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -144,3 +144,4 @@ CHANNEL_LAYERS = {
 #     },
 # }
 
+#sudo turnserver -a -o -v -n  --no-dtls --no-tls -u Resonance:Adeniyi9 -r "Emmanuel Oguhh"

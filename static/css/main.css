@@ -1,7 +1,14 @@
+
+
+
+
+
+
+
 .video-grid-container{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	color: black;
+	color: grey;
 }
 
 .main-grid-container{
@@ -10,6 +17,6 @@
 }
 
 video{
-	border-radius: 25%;
-	background-color: black;
+	border-radius: 5%;
+	background-color: grey;
 }
