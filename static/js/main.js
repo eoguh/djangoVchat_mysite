@@ -142,7 +142,7 @@ const constraints = {
             "max": 768
         }
     },
-    audio: {'echoCancellation': {exact: hasEchoCancellation}},
+    audio: {'echoCancellation': true},
 }
 
 const localVideo = document.querySelector('#local-video'); // grabs the local video and inputs it to the video element in the HTML.
@@ -287,52 +287,6 @@ var userMedia = navigator.mediaDevices.getUserMedia(constraints)
             }
         })
 
-        // userMedia
-        //     .then(stream => {
-        //         localStream = stream; // recall that localStream variable was assigned earlier.
-        //         localVideo.srcObject =localStream; // assigns the media stream to the source of the local video.
-        //         localVideo.muted = true; // mutes our media, so we don't hear ourselves.
-
-        //         localVideo.controls = false
-
-                
-        //         var audioTracks = stream.getAudioTracks(); // gets the audio tracks for manipulation
-        //         var videoTracks = stream.getVideoTracks(); // gets the video tracks for manipulation
-            
-        //         audioTracks[0].enabled = true; // enables audio tracks, although enabled by default. but this functionality will be usefull in toggling audio.
-        //         videoTracks[0].enabled = true; // enables video tracks, although enabled by default. but this functionality will be usefull in toggling video.
-                
-        //         // function to toggle the audio on anf off.
-        //         btnToggleAudio.addEventListener('click', () => {
-        //             audioTracks[0].enabled = !audioTracks[0].enabled; // inverts the boolean value of audioTracks[0].enabled when the audio toggle button is clicked.
-                    
-        //             if(audioTracks[0].enabled){
-        //                 btnToggleAudio.innerHTML = 'Mute Audio';
-        //                 return;
-        //             }
-        //             btnToggleAudio.innerHTML = 'Unmute Audio'
-        //         })
-
-        //         // function to toggle the video on anf off.
-        //         btnToggleVideo.addEventListener('click', () => {
-        //             videoTracks[0].enabled = !videoTracks[0].enabled; // inverts the boolean value of audioTracks[0].enabled when the audio toggle button is clicked.
-                    
-        //             if(audioTracks[0].enabled){
-        //                 btnToggleVideo.innerHTML = 'Disable Video';
-        //                 return;
-        //             }
-        //             btnToggleVideo.innerHTML = 'Enable Video'
-        //         })
-        //     })
-        //     // incase of error, this below code is executed.
-        //     .catch(error => {
-        //         console.log("There is an error accessing media devices, check error log."); // console logs that an error occured
-        //         console.error("Error accessing media devices", error); // narates the error in the console.
-        //     })
-		
-
-
-// function to send signal
 
 
 function sendSignal(action, message){
